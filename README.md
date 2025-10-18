@@ -1,1 +1,0 @@
-# Motorimagery-Laplacian-CSP
