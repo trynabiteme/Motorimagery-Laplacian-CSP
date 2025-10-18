@@ -1,26 +1,4 @@
-"""
-This script demonstrates how to:
-  1. Load raw BrainVision EEG data using MNE.
-  2. Segment (epoch) the data based on event markers for 'left' and 'right' conditions.
-  3. Compare the spectrum (PSD) in channels C3 and C4 for these two conditions.
-  4. Visualize the spectral results in separate plots for each channel and condition.
 
-Your tasks are:
-1) Implement a laplacian spatial filter (you can use any resources, no need to implement
-yourself, but it is not difficult to do it yourself) to create two new channels:
-'C3 lap' and 'C4 lap'
-Then redo the plot PSD calculation and compare to the raw 'C3' and 'C4' channels
-
-2) Implement the CSP pipeline and visualize two CSP channels:
-a) first you need to band-pass filter the continuous data (use the range 9-13 Hz)
-b) epoch the data for a given time interval (use 500-3500ms)
-c) calculate a covariance matrix for each class
-d) calculate all CSP filters weigh and select the two with the highest/lowest eigenvalue
-e) project the EEG data with these two filters, recalculate PSD and plot
-
-you should create two pdfs which you submit with the code:
-one with laplace channels and one with CSP channels
-"""
 #
 import numpy as np
 import mne
